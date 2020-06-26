@@ -64,15 +64,28 @@ patch:
 
 
 # 测试是否生效： 进行 (jbxk)-->如果输入 jkxk 也可以打出说明生效了。
+# 代码含义：
+# speller：拼写处理器，接受字符按键，编辑输入。
+# algebra：拼写运算规则，由之算出的拼写汇入 prism 中。
+# xform：--改写〔不保留原形〕。
+# b-d, f-h 等用来匹配键入的声母。
+# $1_：声母+任意韵母。
+
+## 测试 l/n 模糊音。攻略 (gslt)
+  "speller/algebra/@after last": 'abbrev/^(.).+$/$1/'           # 首字母简拼
   "speller/algebra/@before 1": xform/^([b-df-hj-np-tv-z])$/$1_/
   "speller/algebra/@before 2": derive/([ei])n$/$1ng/            # 模糊拼音 en => eng, in => ing
   "speller/algebra/@before 3": derive/([ei])ng$/$1n/            # 模糊拼音 eng => en, ing => in
+  "speller/algebra/@before 4": derive/^n/l/                     # 模糊拼音 n => l
+  "speller/algebra/@before 5": derive/^l/n/                     # 模糊拼音 l => n
+  "speller/algebra/@before 6": derive/ou$/uo/                   # 模糊拼音 ou => uo
+  "speller/algebra/@before 7": derive/uo$/ou/                   # 模糊拼音 uo => ou
 
   translator/preedit_format: {}     # 输入双拼码的时候不转化为全拼码
 
 
 # 載入朙月拼音擴充詞庫
-  "translator/dictionary": luna_pinyin.extended
+  "translator/dictionary": sli_personal
 
 
 # 符号快速输入和部分符号的快速上屏
