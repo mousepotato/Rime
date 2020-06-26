@@ -1,0 +1,7 @@
+2020/05/27-21:36:21.516328 0x700009a2f000 Log #62: 0 ops saved to Table #63 OK
+2020/05/27-21:36:21.518628 0x700009a2f000 Archiving /Users/sli/Library/Rime/luna_pinyin.userdb/000062.log: OK
+2020/05/27-21:36:21.518715 0x700009a2f000 Table #58: 2 entries OK
+2020/05/27-21:36:21.518831 0x700009a2f000 Table #44: 725 entries OK
+2020/05/27-21:36:21.518890 0x700009a2f000 Table #46: 2 entries OK
+2020/05/27-21:36:21.519425 0x700009a2f000 Archiving /Users/sli/Library/Rime/luna_pinyin.userdb/MANIFEST-000060: OK
+2020/05/27-21:36:21.552797 0x700009a2f000 **** Repaired leveldb /Users/sli/Library/Rime/luna_pinyin.userdb; recovered 3 files; 31158 bytes. Some data may have been lost. ****
